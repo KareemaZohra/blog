@@ -44,7 +44,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active">                                            <a href="#">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Pages</a></li>
+        <!-- in url function you call a route -->
+        <li><a href="{{url('addProduct')}}">Add Product</a></li>
         <li><a href="#">Portfolio</a></li>
           <li><a href="#">Blog</a></li>
         <li><a href="#">Shop</a></li>
@@ -84,9 +85,11 @@
          <img src="images/img3.jpg" class="img-responsive">
     </div>
      </div>
+     <!-- comes from home content -->
    <div class="container">
       @yield('content')
    </div>  
+   <!-- comes from home content -->
       <section class="footer" style="background-color: #F7F7F9">
  <div class="container">
 <div class="row">

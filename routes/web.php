@@ -12,3 +12,5 @@
 */
 
 Route::get('/','homeController@index');
+Route::get('/addProduct','productController@add');
+Route::post('/upload','productController@dbupload');
