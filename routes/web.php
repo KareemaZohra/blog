@@ -18,6 +18,6 @@ Route::get('/', function () {
 Route::get('/project/lara', function () {
     return view('new');
 });
-Route::get('/project/', function () {
+Route::get('/project', function () {
     return view('new');
 });
