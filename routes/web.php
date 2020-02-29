@@ -14,3 +14,5 @@
 Route::get('/','homeController@index');
 Route::get('/addProduct','productController@add');
 Route::post('/upload','productController@dbupload');
+Route::get('/delete/{id}','productController@delete');
+Route::get('/view_full/{id}','homeController@view_full');

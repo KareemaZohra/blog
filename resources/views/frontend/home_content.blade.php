@@ -6,75 +6,20 @@
         <p class="text-muted" style="text-align: center">Claritas processus sequitur mutationem consuetudium lectorumseacula quarta decima futurum.</p>
          </div>
          </div>
+
+      @foreach($data as $d)
+      <div class="col-md-4">
            <div class="row">
-               <div class="col-md-4">
-                   <div class="row">
-                       <div class="col-xs-12">
-                       <img src="images/1.jpg" class="img-responsive">
-                          <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-                       </div></div>
-                       <div class="row">
-                       <div class="col-xs-12" style="top: -14px">
-                       <img src="images/4.jpg" class="img-responsive">
-                          <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-                      </div>
-                   </div>
-               </div>
-               <div class="col-md-4">
-                   <img src="images/2.jpg" class="img-responsive">
-                      <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-                   </div>                 
-               <div class="col-md-4">
-                  <div class="row">
-                  <div class="col-xs-12">
-                   <img src="images/3.jpg" class="img-responsive">
-                      <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-                   </div></div>
-                   <div class="row">
-                    <div class="col-xs-12" style="top: -14px">
-                   <img src="images/5.jpg" class="img-responsive">
-                      <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-                  </div>
-                  </div>              
-           </div>
-             </div>
-           <div class="row">
-   <div class="col-xs-12 col-md-4">
-       <img src="images/6.jpg" class="img-responsive">
-          <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-   </div>
-    <div class="col-xs-12 col-md-4">
-         <img src="images/7.jpg" class="img-responsive">
-            <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-    </div>
-    <div class="col-xs-12 col-md-4">
-         <img src="images/8.jpg" class="img-responsive">
-           <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-    </div>
-     </div>      
-             <div class="row">
-       <div class="col-xs-12 col-md-12">
-        <h1 style="text-align: center">Popular in store</h1>
-             <p class="text-muted" style="text-align: center">Claritas processus sequitur mutationem consuetudium lectorumseacula quarta decima futurum.</p>
+              <div class="col-xs-12">
+              <img src="images/{{$d->photo}}" class="img-responsive">
+              <p class="text-muted">Price : {{$d->price}}</p>
+              <p>Name : {{$d->name}}</p>
+              <a class="btn btn-info" href="{{url('/view_full',$d->id)}}">View full</a>
+              <a class="btn btn-success">Edit</a>
+              <a class="btn btn-danger" href="{{url('/delete',$d->id)}}">Delete</a>
          </div>
-         </div>    
-         <div class="row">
-   <div class="col-xs-12 col-md-3">
-       <img src="images/9.jpg" class="img-responsive">
-       <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-   </div>
-    <div class="col-xs-12 col-md-3">
-         <img src="images/10.jpg" class="img-responsive">
-           <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-    </div>
-    <div class="col-xs-12 col-md-3">
-         <img src="images/11.jpg" class="img-responsive">
-            <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-    </div>
-     <div class="col-xs-12 col-md-3">
-         <img src="images/13.jpg" class="img-responsive">
-          <p class="text-muted">$495.00<br>Lorriusm ipsum dollar monstar<br>Lorriusm ipsum dollar</p>
-    </div>
-     </div>   
-      </div>
+       </div>
+     </div>
+     @endforeach
+
 @endsection

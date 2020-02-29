@@ -11,31 +11,16 @@
     <title>Add Product</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="offset-md-3 col-md-6">
-          <form action="{{url('upload')}}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="form-group">
-              <label>Product Name</label>
-              <input type="text" class="form-control" name="name" placeholder="Enter name">
-            </div>
-            <div class="form-group">
-              <label>Product Price</label>
-              <input type="number" class="form-control" name="price" placeholder="Enter Price">
-            </div>
-            <div class="form-group form-check">
-              <input type="file" name="photo">
-              <label class="form-check-label" for="exampleCheck1">Attach a photo</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Add Product to database</button>
-          </form>
-        </div>
+    <div class="col-md-4">
+           <div class="row">
+              <div class="col-xs-12">
+              <img src="{{URL::to('images/'.$data->photo)}}" class="img-responsive">
+              <p class="text-muted">Price : {{$data->price}}</p>
+              <p>Name : {{$data->name}}</p>
+         </div>
+       </div>
+     </div>
 
-      </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
