@@ -48,8 +48,8 @@
         <li><a href="{{url('addProduct')}}">Add Product</a></li>
         <li><a href="#">Portfolio</a></li>
           <li><a href="#">Blog</a></li>
-        <li><a href="#">Shop</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Registration</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" style="border-right: 1px solid #e7e7e7; border-left: 1px solid #e7e7e7"><i class="fas fa-search"></i></a></li>

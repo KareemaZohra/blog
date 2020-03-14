@@ -15,7 +15,7 @@
               <p class="text-muted">Price : {{$d->price}}</p>
               <p>Name : {{$d->name}}</p>
               <a class="btn btn-info" href="{{url('/view_full',$d->id)}}">View full</a>
-              <a class="btn btn-success">Edit</a>
+              <a class="btn btn-success" href="{{url('/edit',$d->id)}}">Edit</a>
               <a class="btn btn-danger" href="{{url('/delete',$d->id)}}">Delete</a>
          </div>
        </div>
